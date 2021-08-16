@@ -1,4 +1,9 @@
+use std::io;
+
 fn main() {
-    let testvalue = 123;
-    println!("Hello, world! {}", testvalue);
+    let mut testvalue = String::new();
+
+    io::stdin().read_line(&mut testvalue);
+
+    println!("Hello {}", testvalue);
 }
